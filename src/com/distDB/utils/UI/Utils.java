@@ -1,4 +1,4 @@
-package com.distDB.UI.utils;
+package com.distDB.utils.UI;
 
 import android.app.Activity;
 import android.app.AlertDialog;

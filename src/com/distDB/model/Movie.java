@@ -1,22 +1,27 @@
 package com.distDB.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Movie {
 	private int mId;
 	private String title;
 	private String releaseDate;
-	
-	public Movie(int mId, String title, String releaseDate) {
+	private List<Track> tracks = new ArrayList<Track>();
+
+	public Movie(int mId, String title, String releaseDate, List<Track> tracks) {
 		this.mId = mId;
 		this.title = title;
 		this.releaseDate = releaseDate;
+		this.tracks = tracks;
 	}
 
-	public Movie() {	
+	public Movie() {
 	}
-	
+
 	@Override
 	public String toString() {
-		return "#" + mId + " - " + title; 
+		return "#" + mId + " - " + title + "\n" + "Tracks\n" + tracks.toString() + "\n\n";
 	}
 
 	public int getmId() {
@@ -41,5 +46,21 @@ public class Movie {
 
 	public void setReleaseDate(String releaseDate) {
 		this.releaseDate = releaseDate;
+	}
+
+	public void addTrack(Track track) {
+		tracks.add(track);
+	}
+
+	public void addTracks(List<Track> tracks) {
+		if(tracks != null) {
+			for(Track track : tracks) {
+				this.tracks.add(track);
+			}
+		}
+	}
+
+	public List<Track> getTracks() {
+		return tracks;
 	}
 }

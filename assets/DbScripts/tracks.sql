@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS tracks;
+DROP TABLE IF EXISTS movie_track;
+CREATE TABLE tracks(tId INTEGER PRIMARY KEY autoincrement, title TEXT, author TEXT, release_date TEXT, duration INTEGER);
+INSERT INTO tracks VALUES(1,"titleA","authorA", "2014-01-01", 180);
+INSERT INTO tracks VALUES(2,"titleB","authorB", "2014-02-02", 181);
+INSERT INTO tracks VALUES(3,"titleC","authorC", "2014-03-03", 182);
+INSERT INTO tracks VALUES(4,"titleD","authorD", "2014-04-04", 183);
+CREATE TABLE movie_track(mId INTEGER, tId INTEGER, PRIMARY KEY(mId, tId));
+INSERT INTO movie_track VALUES(1,1);
+INSERT INTO movie_track VALUES(1,2);
+INSERT INTO movie_track VALUES(2,1);
+INSERT INTO movie_track VALUES(2,3);
+INSERT INTO movie_track VALUES(3,3);
+INSERT INTO movie_track VALUES(3,2);
+INSERT INTO movie_track VALUES(3,1);

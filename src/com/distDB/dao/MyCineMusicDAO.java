@@ -1,9 +1,9 @@
-package com.distDB.moviesDAO;
+package com.distDB.dao;
 
 import java.util.List;
 
 import com.distDB.model.Movie;
 
-public interface MoviesDAO {
+public interface MyCineMusicDAO {
 	List<Movie> getMovies();
 }
