@@ -19,7 +19,7 @@ public class Track {
 
 	@Override
 	public String toString() {
-		return "#" + tId + " - " + title + "\n";
+		return "#" + tId + " - " + title + " by " + author + "\n";
 	}
 
 	public int gettId() {

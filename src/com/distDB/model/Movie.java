@@ -21,7 +21,7 @@ public class Movie {
 
 	@Override
 	public String toString() {
-		return "#" + mId + " - " + title + "\n" + "Tracks\n" + tracks.toString() + "\n\n";
+		return "Movie #" + mId + " - " + title + "\n" + "Tracks\n" + tracks.toString() + "\n\n";
 	}
 
 	public int getmId() {
